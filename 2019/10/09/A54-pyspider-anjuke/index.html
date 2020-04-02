@@ -1,0 +1,1516 @@
+<!--      　　　___           ___           ___           ___           ___                    ___           ___       ___           ___     
+　　　　　　   /\  \         /\  \         /\__\         |\__\         /\  \                  /\  \         /\__\     /\  \         /\  \    
+  　　　　　　 \:\  \       /::\  \       /:/  /         |:|  |       /::\  \                /::\  \       /:/  /    /::\  \       /::\  \   
+          　　  \:\  \     /:/\:\  \     /:/__/          |:|  |      /:/\ \  \              /:/\:\  \     /:/  /    /:/\:\  \     /:/\:\  \  
+          　　  /::\  \   /::\~\:\  \   /::\  \ ___      |:|__|__   _\:\~\ \  \            /::\~\:\__\   /:/  /    /:/  \:\  \   /:/  \:\  \ 
+          　　 /:/\:\__\ /:/\:\ \:\__\ /:/\:\  /\__\ ____/::::\__\ /\ \:\ \ \__\          /:/\:\ \:|__| /:/__/    /:/__/ \:\__\ /:/__/_\:\__\
+        　　  /:/  \/__/ \/_|::\/:/  / \/__\:\/:/  / \::::/~~/~    \:\ \:\ \/__/          \:\~\:\/:/  / \:\  \    \:\  \ /:/  / \:\  /\ \/__/
+        　　 /:/  /         |:|::/  /       \::/  /   ~~|:|~~|      \:\ \:\__\             \:\ \::/  /   \:\  \    \:\  /:/  /   \:\ \:\__\  
+        　　 \/__/          |:|\/__/        /:/  /      |:|  |       \:\/:/  /              \:\/:/  /     \:\  \    \:\/:/  /     \:\/:/  /  
+        　　                |:|  |         /:/  /       |:|  |        \::/  /                \::/__/       \:\__\    \::/  /       \::/  /   
+        　　                 \|__|         \/__/         \|__|         \/__/                  ~~            \/__/     \/__/         \/__/    
+
+   ┌───┐   ┌───┬───┬───┬───┐   ┌───┬───┬───┬───┐   ┌───┬───┬───┬───┐  ┌───┬───┬───┐
+   │ Esc  │   │  F1  │  F2  │  F3  │  F4  │   │  F5  │  F6  │  F7  │  F8  │   │  F9  │ F10  │ F11  │ F12  │  │ P/S  │ S L  │ P/B  │
+   └───┘   └───┴───┴───┴───┘   └───┴───┴───┴───┘   └───┴───┴───┴───┘  └───┴───┴───┘
+   ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐ ┌───┬───┬───┐
+   │ ~ `  │ ! 1  │ @ 2  │ # 3  │ $ 4  │ % 5  │ ^ 6  │ & 7  │ * 8  │ ( 9  │ ) 0  │ _ -  │ + =  │    BacSp     │ │ Ins  │ Hom  │ PUp  │
+   ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┤ ├───┼───┼───┤
+   │   Tab    │  Q   │  W   │  E   │  R   │  T   │  Y   │  U   │  I   │  O   │  P   │ { [  │ } ]  │   | \    │ │ Del  │ End  │ PDn  │
+   ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴─────┤ └───┴───┴───┘
+   │    Caps    │  A   │  S   │  D   │  F   │  G   │  H   │  J   │  K   │  L   │ : ;  │ " '  │     Enter      │
+   ├──────┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴────────┤         ┌───┐
+   │     Shift      │  Z   │  X   │  C   │  V   │  B   │  N   │  M   │ < ,  │ > .  │ ? /  │       Shift        │         │  ↑  │
+   ├─────┬──┴─┬─┴──┬┴───┴───┴───┴───┴───┴──┬┴───┼───┴┬────┬────┤ ┌───┼───┼───┐
+   │   Ctrl   │        │  Alt   │                     Space                    │   Alt  │   Fn   │   ＝   │  Ctrl  │ │  ←  │  ↓  │  →  │
+   └─────┴────┴────┴───────────────────────┴────┴────┴────┴────┘ └───┴───┴───┘
+
+              写字楼里写字间，写字间里程序员；程序人员写程序，又拿程序换酒钱。酒醒只在网上坐，酒醉还来网下眠；酒醉酒醒日复日，网上网下年复年。
+              但愿老死电脑间，不愿鞠躬老板前；奔驰宝马贵者趣，公交自行程序员。别人笑我忒疯癫，我笑自己命太贱；不见满街漂亮妹，哪个归得程序员？
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>Python3 爬虫实战 — 安居客武汉二手房 | TRHX&#39;S BLOG</title>
+  
+  <meta name="keywords" content="Python爬虫,数据分析,数据可视化,web前端,Java,Python,HTML,软件工程,大学生,hexo,GitHubPages,CodingPages">
+  
+  
+  <meta name="description" content="TRHX 的个人博客；主攻 Python、爬虫、WEB前端、大数据、数据分析、数据可视化；求知若饥，虚心若愚，一入 IT 深似海，从此学习无绝期，记录毕生所学！">
+  
+
+  
+  <link rel="alternate" href="/atom.xml" title="TRHX'S BLOG">
+  
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- meta -->
+  
+  
+  <meta name='theme-color' content='#f24e32'>
+  <meta name='msapplication-TileColor' content='#f24e32'>
+  <meta name='msapplication-config' content='https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/browserconfig.xml'>
+  
+  <!-- 360 -->
+  <meta name="360-site-verification" content="d98acd5dccc92e495179410dd58186be" />
+  <!-- 360自动收录 -->
+  <script>
+    (function () {
+      var src = "https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba";
+      document.write('<script src="' + src + '" id="sozz"><\/script>');
+    })();
+  </script>
+  <!-- sogou -->
+  <meta name="sogou_site_verification" content="l0yGeAV56W" />
+  <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.6.3/css/all.min.css">
+  
+  
+  <link rel='shortcut icon' type='image/x-icon' href='https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/images/favicon.ico'>
+  <link rel='icon' type='image/x-icon' sizes='32x32' href='https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/images/favicon-32x32.png'>
+  <link rel='apple-touch-icon' type='image/png' sizes='180x180' href='https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/images/apple-touch-icon.png'>
+  <link rel='mask-icon' color='#f24e32' href='https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/images/safari-pinned-tab.svg'>
+  <link rel='manifest' href='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-favicon@19.9.7/site.webmanifest'>
+  
+
+  
+  <link rel="shortcut icon" type='image/x-icon' href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/images/favicon.ico">
+  
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/css/style.css">
+  
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width = num + "%";
+    }
+  </script>
+
+  
+  
+  <!-- ba -->
+  <script>
+    var _hmt = _hmt || [];
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?df0bc7c6bdbd80356ba4db429724ccad";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+  
+  <!-- Google Adsense -->
+  <script data-ad-client="ca-pub-1913211097936916" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+<body>
+  
+  
+<div class="cover-wrapper">
+  <cover class='cover post half'>
+    
+    
+  <img class='logo' src='https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/images/logo.png'/>
+
+
+  <div class="m_search">
+    <form name="searchform" class="form u-search-form">
+      <input type="text" class="input u-search-input" placeholder="世界之大，探索一下！" />
+      <i class="icon fas fa-search fa-fw"></i>
+    </form>
+  </div>
+
+<div class='menu navgation'>
+  <ul class='h-list'>
+    
+      
+        <li>
+          <a class="nav home" href="/"
+            
+            
+            id="home">
+            <i class='fas fa-home fa-fw'></i>&nbsp;主页
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/categories/"
+            
+            
+            id="categories">
+            <i class='fas fa-folder-open fa-fw'></i>&nbsp;分类
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/tags/"
+            
+            
+            id="tags">
+            <i class='fas fa-tags fa-fw'></i>&nbsp;标签
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/friends/"
+            
+            
+            id="friends">
+            <i class='fas fa-users fa-fw'></i>&nbsp;朋友
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/comments/"
+            
+            
+            id="comments">
+            <i class='fas fa-comments fa-fw'></i>&nbsp;留言
+          </a>
+        </li>
+      
+    
+  </ul>
+</div>
+
+    
+    <br>
+    <!-- Hitokoto 一言 -->
+    <!--<p id="hitokoto"></p>
+			<script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
+      <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>-->
+    <!-- 打字特效 -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <div style="text-align: center;font-weight: bold;color: #1BC3FB;">
+      <span id="subtitle"></span>
+      <span id="typed-cursor"></span>
+    </div>
+    <script>
+      var typed = new Typed("#subtitle", { strings: ["Live a good life, write some good code !!!", "愿自己的努力终将获得回报。", "花开不是为了花落，而是为了开的更加灿烂。", "没有伞的孩子必须努力奔跑！", "欲望以提升热忱，毅力以磨平高山。", "如果放弃太早，你永远都不知道自己会错过什么。", "没有礁石，就没有美丽的浪花；没有挫折，就没有壮丽的人生。"], startDelay: 1000, typeSpeed: 100, loop: !0, backSpeed: 60, backDelay: 2000, showCursor: !0 })
+    </script>
+  </cover>
+  <header class="l_header pure">
+  <div id="loading-bar-wrapper">
+    <div id="loading-bar" class="pure"></div>
+  </div>
+
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+      <a class="logo flat-box" href='/' >
+        
+          TRHX'S BLOG
+        
+      </a>
+			<div class='menu navgation'>
+				<ul class='h-list'>
+          
+  					
+  						<li>
+								<a class="nav flat-box" href="/"
+                  
+                  
+                  id="home">
+									<i class='fas fa-home fa-fw'></i>&nbsp;主页
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/archives/"
+                  
+                  
+                  id="archives">
+									<i class='fas fa-archive fa-fw'></i>&nbsp;归档
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/friends/"
+                  
+                  
+                  id="friends">
+									<i class='fas fa-users fa-fw'></i>&nbsp;朋友
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/comments/"
+                  
+                  
+                  id="comments">
+									<i class='fas fa-comments fa-fw'></i>&nbsp;留言
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/about/"
+                  
+                  
+                    target="_blank"
+                  
+                  id="about">
+									<i class='fas fa-info-circle fa-fw'></i>&nbsp;关于
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/box/"
+                  
+                  
+                    target="_blank"
+                  
+                  id="box">
+									<i class='fas fa-tools fa-fw'></i>&nbsp;百宝箱
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="https://mi.aliyun.com/shop/40012"
+                  
+                  
+                    target="_blank"
+                  
+                  id="https:mi.aliyun.comshop40012">
+									<i class='fas fa-link fa-fw'></i>&nbsp;米店
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/2019-nCoV/"
+                  
+                  
+                    target="_blank"
+                  
+                  id="2019-nCoV">
+									<i class='fas fa-heart fa-fw'></i>&nbsp;肺炎疫情图
+								</a>
+							</li>
+      			
+      		
+				</ul>
+			</div>
+
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="搜索" />
+						<i class="icon fas fa-search fa-fw"></i>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a class="fas fa-search fa-fw" href='javascript:void(0)'></a></li>
+				
+				<li class='s-menu'><a class="fas fa-bars fa-fw" href='javascript:void(0)'></a></li>
+			</ul>
+		</div>
+
+		<div class='nav-sub container container--flex'>
+			<a class="logo flat-box"></a>
+			<ul class='switcher h-list'>
+				<li class='s-comment'><a class="flat-btn fas fa-comments fa-fw" href='javascript:void(0)'></a></li>
+        
+          <li class='s-toc'><a class="flat-btn fas fa-list fa-fw" href='javascript:void(0)'></a></li>
+        
+			</ul>
+		</div>
+	</div>
+</header>
+	<aside class="menu-phone">
+    <header>
+		<nav class="menu navgation">
+      <ul>
+        
+          
+            <li>
+							<a class="nav flat-box" href="/"
+                
+                
+                id="home">
+								<i class='fas fa-home fa-fw'></i>&nbsp;主页
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/archives/"
+                
+                
+                id="archives">
+								<i class='fas fa-archive fa-fw'></i>&nbsp;归档
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/friends/"
+                
+                
+                id="friends">
+								<i class='fas fa-users fa-fw'></i>&nbsp;朋友
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/comments/"
+                
+                
+                id="comments">
+								<i class='fas fa-comments fa-fw'></i>&nbsp;留言
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="https://mi.aliyun.com/shop/40012"
+                
+                
+                id="https:mi.aliyun.comshop40012">
+								<i class='fas fa-link fa-fw'></i>&nbsp;米店
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/box/"
+                
+                
+                id="box">
+								<i class='fas fa-tools fa-fw'></i>&nbsp;百宝箱
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="https://itrhx.blog.csdn.net/"
+                
+                
+                id="https:itrhx.blog.csdn.net">
+								<i class='fab fa-cuttlefish fa-fw'></i>&nbsp;CSDN
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/2019-nCoV/"
+                
+                
+                id="2019-nCoV">
+								<i class='fas fa-heart fa-fw'></i>&nbsp;肺炎疫情图
+							</a>
+            </li>
+          
+       
+      </ul>
+		</nav>
+    </header>
+	</aside>
+<script>setLoadingBarProgress(40);</script>
+
+</div>
+
+  <div class="l_body">
+    <div class='body-wrapper'>
+      <div class='l_main'>
+  
+
+  
+    <article id="post" class="post white-box article-type-post" itemscope itemprop="blogPost">
+      
+
+
+  <section class='meta'>
+    
+    
+      <a title='Python3 爬虫实战 — 安居客武汉二手房' href='/2019/10/09/A54-pyspider-anjuke/'><img class='thumbnail' src='https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/thumbnail/combat.png'></a>
+    
+    <div class="meta" id="header-meta">
+      
+        
+  
+    <h1 class="title">
+      <a href="/2019/10/09/A54-pyspider-anjuke/">
+        Python3 爬虫实战 — 安居客武汉二手房
+      </a>
+    </h1>
+  
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    <a href="https://www.itrhx.com" rel="nofollow">
+      
+        <img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.9/images/trhx.png">
+      
+      <p>TRHX</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2019-10-09</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class='new-meta-item category'>
+    <a href='/categories/Python3-学习笔记/爬虫实战/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>Python3 学习笔记&nbsp;/&nbsp;爬虫实战</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  
+    <div class="new-meta-item browse busuanzi">
+      <a class='notlink'>
+        <i class="fas fa-eye" aria-hidden="true"></i>
+        <p>
+          <span id="busuanzi_value_page_pv">
+            <i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i>
+          </span>
+        </p>
+      </a>
+    </div>
+  
+
+
+          
+        
+          
+            
+  
+    <div class="new-meta-item wordcount">
+      <a class='notlink'>
+        <i class="fas fa-keyboard" aria-hidden="true"></i>
+        <p>字数统计:</p>
+        <p>1,686字</p>
+      </a>
+    </div>
+    <div class="new-meta-item readtime">
+      <a class='notlink'>
+        <i class="fas fa-hourglass-half" aria-hidden="true"></i>
+        <p>阅读时长≈</p>
+        <p>8分</p>
+      </a>
+    </div>
+  
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          <blockquote>
+<p>爬取时间：2019-10-09<br>爬取难度：★★☆☆☆☆<br>请求链接：<a href="https://wuhan.anjuke.com/sale/" target="_blank" rel="noopener">https://wuhan.anjuke.com/sale/</a><br>爬取目标：爬取武汉二手房每一条售房信息，包含地理位置、价格、面积等，保存为 CSV 文件<br>涉及知识：请求库 requests、解析库 Beautiful Soup、CSV 文件储存、列表操作、分页判断<br>完整代码：<a href="https://github.com/TRHX/Python3-Spider-Practice/tree/master/anjuke" target="_blank" rel="noopener">https://github.com/TRHX/Python3-Spider-Practice/tree/master/anjuke</a><br>其他爬虫实战代码合集（持续更新）：<a href="https://github.com/TRHX/Python3-Spider-Practice" target="_blank" rel="noopener">https://github.com/TRHX/Python3-Spider-Practice</a><br>爬虫实战专栏（持续更新）：<a href="https://itrhx.blog.csdn.net/article/category/9351278" target="_blank" rel="noopener">https://itrhx.blog.csdn.net/article/category/9351278</a></p>
+</blockquote>
+<hr>
+<a id="more"></a>
+<h1 id="【1x00】页面整体分析"><a href="#【1x00】页面整体分析" class="headerlink" title="【1x00】页面整体分析"></a><font color="#FF0000">【1x00】页面整体分析</font></h1><p>分析 <a href="https://wuhan.anjuke.com/sale/" target="_blank" rel="noopener">安居客武汉二手房页面</a>，这次爬取实战准备使用 BeautifulSoup 解析库，熟练 BeautifulSoup 解析库的用法，注意到该页面与其他页面不同的是，不能一次性看到到底有多少页，以前知道一共有多少页，直接一个循环爬取就行了，虽然可以通过改变 url 来尝试找到最后一页，但是这样就显得不程序员了😂，因此可以通过 BeautifulSoup 解析 <code>下一页按钮</code>，提取到下一页的 url，直到没有 <code>下一页按钮</code> 这个元素为止，从而实现所有页面的爬取，剩下的信息提取和储存就比较简单了</p>
+<hr>
+<h1 id="【2x00】解析模块"><a href="#【2x00】解析模块" class="headerlink" title="【2x00】解析模块"></a><font color="#FF0000">【2x00】解析模块</font></h1><p>分析页面，可以发现每条二手房信息都是包含在 <code>&lt;li&gt;</code> 标签内的，因此可以使用 BeautifulSoup 解析页面得到所有的 <code>&lt;li&gt;</code> 标签，然后再循环访问每个 <code>&lt;li&gt;</code> 标签，依次解析得到每条二手房的各种信息</p>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A54/01.png" alt="01"><br></fancybox>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">parse_pages</span><span class="params">(url, num)</span>:</span></span><br><span class="line">    response = requests.get(url=url, headers=headers)</span><br><span class="line">    soup = BeautifulSoup(response.text, <span class="string">'lxml'</span>)</span><br><span class="line">    result_list = soup.find_all(<span class="string">'li'</span>, class_=<span class="string">'list-item'</span>)</span><br><span class="line">    <span class="comment"># print(len(result_list))</span></span><br><span class="line">    <span class="keyword">for</span> result <span class="keyword">in</span> result_list:</span><br><span class="line">        <span class="comment"># 标题</span></span><br><span class="line">        title = result.find(<span class="string">'a'</span>, class_=<span class="string">'houseListTitle'</span>).text.strip()</span><br><span class="line">        <span class="comment"># print(title)</span></span><br><span class="line">        <span class="comment"># 户型</span></span><br><span class="line">        layout = result.select(<span class="string">'.details-item &gt; span'</span>)[<span class="number">0</span>].text</span><br><span class="line">        <span class="comment"># print(layout)</span></span><br><span class="line">        <span class="comment"># 面积</span></span><br><span class="line">        cover = result.select(<span class="string">'.details-item &gt; span'</span>)[<span class="number">1</span>].text</span><br><span class="line">        <span class="comment"># print(cover)</span></span><br><span class="line">        <span class="comment"># 楼层</span></span><br><span class="line">        floor = result.select(<span class="string">'.details-item &gt; span'</span>)[<span class="number">2</span>].text</span><br><span class="line">        <span class="comment"># print(floor)</span></span><br><span class="line">        <span class="comment"># 建造年份</span></span><br><span class="line">        year = result.select(<span class="string">'.details-item &gt; span'</span>)[<span class="number">3</span>].text</span><br><span class="line">        <span class="comment"># print(year)</span></span><br><span class="line">        <span class="comment"># 单价</span></span><br><span class="line">        unit_price = result.find(<span class="string">'span'</span>, class_=<span class="string">'unit-price'</span>).text.strip()</span><br><span class="line">        <span class="comment"># print(unit_price)</span></span><br><span class="line">        <span class="comment"># 总价</span></span><br><span class="line">        total_price = result.find(<span class="string">'span'</span>, class_=<span class="string">'price-det'</span>).text.strip()</span><br><span class="line">        <span class="comment"># print(total_price)</span></span><br><span class="line">        <span class="comment"># 关键字</span></span><br><span class="line">        keyword = result.find(<span class="string">'div'</span>, class_=<span class="string">'tags-bottom'</span>).text.strip()</span><br><span class="line">        <span class="comment"># print(keyword)</span></span><br><span class="line">        <span class="comment"># 地址</span></span><br><span class="line">        address = result.find(<span class="string">'span'</span>, class_=<span class="string">'comm-address'</span>).text.replace(<span class="string">' '</span>, <span class="string">''</span>).replace(<span class="string">'\n'</span>, <span class="string">''</span>)</span><br><span class="line">        <span class="comment"># print(address)</span></span><br><span class="line">        <span class="comment"># 详情页url</span></span><br><span class="line">        details_url = result.find(<span class="string">'a'</span>, class_=<span class="string">'houseListTitle'</span>)[<span class="string">'href'</span>]</span><br><span class="line">        <span class="comment"># print(details_url)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    start_num = <span class="number">0</span></span><br><span class="line">    start_url = <span class="string">'https://wuhan.anjuke.com/sale/'</span></span><br><span class="line">    parse_pages(start_url, start_num)</span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="【3x00】循环爬取模块"><a href="#【3x00】循环爬取模块" class="headerlink" title="【3x00】循环爬取模块"></a><font color="#FF0000">【3x00】循环爬取模块</font></h1><p>前面已经分析过，该网页是无法一下就能看到一共有多少页的，尝试找到最后一页，发现一共有50页，那么此时就可以搞个循环，一直到第50页就行了，但是如果有一天页面数增加了呢，那么代码的可维护性就不好了，我们可以观察 <code>下一页按钮</code> ，当存在下一页的时候，是 <code>&lt;a&gt;</code> 标签，并且带有下一页的 URL，不存在下一页的时候是 <code>&lt;i&gt;</code> 标签，因此可以写个 <code>if</code> 语句，判断是否存在此 <code>&lt;a&gt;</code> 标签，若存在，表示有下一页，然后提取其 <code>href</code> 属性并传给解析模块，实现后面所有页面的信息提取，此外，由于安居客有反爬系统，我们还可以利用 Python中的 <code>random.randint()</code> 方法，在两个数值之间随机取一个数，传入 <code>time.sleep()</code> 方法，实现随机暂停爬取</p>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A54/02.png" alt="02"><br></fancybox>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 判断是否还有下一页</span></span><br><span class="line">next_url = soup.find_all(<span class="string">'a'</span>, class_=<span class="string">'aNxt'</span>)</span><br><span class="line"><span class="keyword">if</span> len(next_url) != <span class="number">0</span>:</span><br><span class="line">    num += <span class="number">1</span></span><br><span class="line">    print(<span class="string">'第'</span> + str(num) + <span class="string">'页数据爬取完毕！'</span>)</span><br><span class="line">    <span class="comment"># 3-60秒之间随机暂停</span></span><br><span class="line">    time.sleep(random.randint(<span class="number">3</span>, <span class="number">60</span>))</span><br><span class="line">    parse_pages(next_url[<span class="number">0</span>].attrs[<span class="string">'href'</span>], num)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">'所有数据爬取完毕！'</span>)</span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="【4x00】数据储存模块"><a href="#【4x00】数据储存模块" class="headerlink" title="【4x00】数据储存模块"></a><font color="#FF0000">【4x00】数据储存模块</font></h1><p>数据储存比较简单，将每个二手房信息组成一个列表，依次写入到 anjuke.csv 文件中即可</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">results = [title, layout, cover, floor, year, unit_price, total_price, keyword, address, details_url]</span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'anjuke.csv'</span>, <span class="string">'a'</span>, newline=<span class="string">''</span>, encoding=<span class="string">'utf-8-sig'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    w = csv.writer(f)</span><br><span class="line">    w.writerow(results)</span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="【5x00】完整代码"><a href="#【5x00】完整代码" class="headerlink" title="【5x00】完整代码"></a><font color="#FF0000">【5x00】完整代码</font></h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># =============================================</span></span><br><span class="line"><span class="comment"># --*-- coding: utf-8 --*--</span></span><br><span class="line"><span class="comment"># @Time    : 2019-10-09</span></span><br><span class="line"><span class="comment"># @Author  : TRHX</span></span><br><span class="line"><span class="comment"># @Blog    : www.itrhx.com</span></span><br><span class="line"><span class="comment"># @CSDN    : https://blog.csdn.net/qq_36759224</span></span><br><span class="line"><span class="comment"># @FileName: anjuke.py</span></span><br><span class="line"><span class="comment"># @Software: PyCharm</span></span><br><span class="line"><span class="comment"># =============================================</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> csv</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"></span><br><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">'User-Agent'</span>: <span class="string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36'</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">parse_pages</span><span class="params">(url, num)</span>:</span></span><br><span class="line">    response = requests.get(url=url, headers=headers)</span><br><span class="line">    soup = BeautifulSoup(response.text, <span class="string">'lxml'</span>)</span><br><span class="line">    result_list = soup.find_all(<span class="string">'li'</span>, class_=<span class="string">'list-item'</span>)</span><br><span class="line">    <span class="comment"># print(len(result_list))</span></span><br><span class="line">    <span class="keyword">for</span> result <span class="keyword">in</span> result_list:</span><br><span class="line">        <span class="comment"># 标题</span></span><br><span class="line">        title = result.find(<span class="string">'a'</span>, class_=<span class="string">'houseListTitle'</span>).text.strip()</span><br><span class="line">        <span class="comment"># print(title)</span></span><br><span class="line">        <span class="comment"># 户型</span></span><br><span class="line">        layout = result.select(<span class="string">'.details-item &gt; span'</span>)[<span class="number">0</span>].text</span><br><span class="line">        <span class="comment"># print(layout)</span></span><br><span class="line">        <span class="comment"># 面积</span></span><br><span class="line">        cover = result.select(<span class="string">'.details-item &gt; span'</span>)[<span class="number">1</span>].text</span><br><span class="line">        <span class="comment"># print(cover)</span></span><br><span class="line">        <span class="comment"># 楼层</span></span><br><span class="line">        floor = result.select(<span class="string">'.details-item &gt; span'</span>)[<span class="number">2</span>].text</span><br><span class="line">        <span class="comment"># print(floor)</span></span><br><span class="line">        <span class="comment"># 建造年份</span></span><br><span class="line">        year = result.select(<span class="string">'.details-item &gt; span'</span>)[<span class="number">3</span>].text</span><br><span class="line">        <span class="comment"># print(year)</span></span><br><span class="line">        <span class="comment"># 单价</span></span><br><span class="line">        unit_price = result.find(<span class="string">'span'</span>, class_=<span class="string">'unit-price'</span>).text.strip()</span><br><span class="line">        <span class="comment"># print(unit_price)</span></span><br><span class="line">        <span class="comment"># 总价</span></span><br><span class="line">        total_price = result.find(<span class="string">'span'</span>, class_=<span class="string">'price-det'</span>).text.strip()</span><br><span class="line">        <span class="comment"># print(total_price)</span></span><br><span class="line">        <span class="comment"># 关键字</span></span><br><span class="line">        keyword = result.find(<span class="string">'div'</span>, class_=<span class="string">'tags-bottom'</span>).text.strip()</span><br><span class="line">        <span class="comment"># print(keyword)</span></span><br><span class="line">        <span class="comment"># 地址</span></span><br><span class="line">        address = result.find(<span class="string">'span'</span>, class_=<span class="string">'comm-address'</span>).text.replace(<span class="string">' '</span>, <span class="string">''</span>).replace(<span class="string">'\n'</span>, <span class="string">''</span>)</span><br><span class="line">        <span class="comment"># print(address)</span></span><br><span class="line">        <span class="comment"># 详情页url</span></span><br><span class="line">        details_url = result.find(<span class="string">'a'</span>, class_=<span class="string">'houseListTitle'</span>)[<span class="string">'href'</span>]</span><br><span class="line">        <span class="comment"># print(details_url)</span></span><br><span class="line">        results = [title, layout, cover, floor, year, unit_price, total_price, keyword, address, details_url]</span><br><span class="line">        <span class="keyword">with</span> open(<span class="string">'anjuke.csv'</span>, <span class="string">'a'</span>, newline=<span class="string">''</span>, encoding=<span class="string">'utf-8-sig'</span>) <span class="keyword">as</span> f:</span><br><span class="line">            w = csv.writer(f)</span><br><span class="line">            w.writerow(results)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 判断是否还有下一页</span></span><br><span class="line">    next_url = soup.find_all(<span class="string">'a'</span>, class_=<span class="string">'aNxt'</span>)</span><br><span class="line">    <span class="keyword">if</span> len(next_url) != <span class="number">0</span>:</span><br><span class="line">        num += <span class="number">1</span></span><br><span class="line">        print(<span class="string">'第'</span> + str(num) + <span class="string">'页数据爬取完毕！'</span>)</span><br><span class="line">        <span class="comment"># 3-60秒之间随机暂停</span></span><br><span class="line">        time.sleep(random.randint(<span class="number">3</span>, <span class="number">60</span>))</span><br><span class="line">        parse_pages(next_url[<span class="number">0</span>].attrs[<span class="string">'href'</span>], num)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(<span class="string">'所有数据爬取完毕！'</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    <span class="keyword">with</span> open(<span class="string">'anjuke.csv'</span>, <span class="string">'a'</span>, newline=<span class="string">''</span>, encoding=<span class="string">'utf-8-sig'</span>) <span class="keyword">as</span> fp:</span><br><span class="line">        writer = csv.writer(fp)</span><br><span class="line">        writer.writerow([<span class="string">'标题'</span>, <span class="string">'户型'</span>, <span class="string">'面积'</span>, <span class="string">'楼层'</span>, <span class="string">'建造年份'</span>, <span class="string">'单价'</span>, <span class="string">'总价'</span>, <span class="string">'关键字'</span>, <span class="string">'地址'</span>, <span class="string">'详情页地址'</span>])</span><br><span class="line">    start_num = <span class="number">0</span></span><br><span class="line">    start_url = <span class="string">'https://wuhan.anjuke.com/sale/'</span></span><br><span class="line">    parse_pages(start_url, start_num)</span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="【6x00】数据截图"><a href="#【6x00】数据截图" class="headerlink" title="【6x00】数据截图"></a><font color="#FF0000">【6x00】数据截图</font></h1><fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A54/03.png" alt="03"><br></fancybox>
+
+<hr>
+<h1 id="【7x00】程序不足的地方"><a href="#【7x00】程序不足的地方" class="headerlink" title="【7x00】程序不足的地方"></a><font color="#FF0000">【7x00】程序不足的地方</font></h1><ul>
+<li><p>虽然使用了随机暂停爬取的方法，但是在爬取了大约 20 页的数据后依然会出现验证页面，导致程序终止</p>
+</li>
+<li><p>原来设想的是可以由用户手动输入城市的拼音来查询不同城市的信息，方法是把用户输入的城市拼音和其他参数一起构造成一个 URL，然后对该 URL 发送请求，判断请求返回的代码，如果是 200 就代表可以访问，也就是用户输入的城市是正确的，然而发现即便是输入错误，该 URL 依然可以访问，只不过会跳转到一个正确的页面，没有搞清楚是什么原理，也就无法实现由用户输入城市来查询这个功能</p>
+</li>
+</ul>
+
+        </div>
+        <hr /><br>
+        
+          <div class="img_container"><a href="https://www.courseduck.com/programming/python/" target="_blank"><img src="https://www.courseduck.com/global/images/Python_header.jpg" class="img-responsive" alt="CourseDuck Python Banner"></a></div>
+        
+        
+          <div id="reward">
+  
+  <div>您的喜欢是作者写作最大的动力！❤️</div>
+  
+  <div class="reward">
+    <a href="https://github.com/Kaiyuan/donate-page" target="_blank" class=" tr3" title="Github"><span
+        id="github"></span></a>
+    <ul id="RewardBox" class="list pos-f tr3">
+      
+      <li id="PayPal" title="PayPal打赏"><a href="https://paypal.me/trhx" target="_blank">PayPal</a></li>
+      
+      
+      <li id="AliPayOR" title="支付宝打赏">AliPay</li>
+      
+      
+      <li id="WeChatPayOR" title="微信打赏">WeChatPay</li>
+      
+      
+      <li id="QQPayOR" title="QQ打赏">QQPay</li>
+      
+    </ul>
+    <div id="RewardText" class="tr3">Donate</div>
+    <div id="QRBox" class="pos-f left-100">
+      <div id="MainBox"></div>
+    </div>
+  </div>
+</div>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+<script>
+  jQuery(document).ready(function () {
+    var QRBox = $('#QRBox');
+    var MainBox = $('#MainBox');
+    var AliPayOR = 'https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/images/reward/AliPayQR.png';
+    var WeChatPayOR = 'https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/images/reward/WeChatQR.png';
+    var QQPayOR = 'https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/images/reward/QQPayQR.png';
+
+    function showQR(QR) {
+      if (QR) {
+        MainBox.css('background-image', 'url(' + QR + ')');
+      }
+      $('#RewardText,#RewardBox,#github').addClass('blur');
+      QRBox.fadeIn(300, function (argument) {
+        MainBox.addClass('showQR');
+      });
+    }
+
+    $('#RewardBox>li').click(function (event) {
+      var thisID = $(this).attr('id');
+      if (thisID === 'AliPayOR') {
+        showQR(AliPayOR);
+      } else if (thisID === 'WeChatPayOR') {
+        showQR(WeChatPayOR);
+      } else if (thisID === 'QQPayOR') {
+        showQR(QQPayOR);
+      }
+    });
+
+    MainBox.click(function (event) {
+      MainBox.removeClass('showQR').addClass('hideQR');
+      setTimeout(function (a) {
+        QRBox.fadeOut(300, function (argument) {
+          MainBox.removeClass('hideQR');
+        });
+        $('#RewardText,#RewardBox,#github').removeClass('blur');
+      }, 600);
+
+    });
+  });
+</script>
+
+        
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <hr>
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-10-21T12:05:48+08:00">
+  <a class='notlink'>
+    <i class="fas fa-clock" aria-hidden="true"></i>
+    <p>最后更新于 2019年10月21日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/爬虫/" rel="nofollow"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<p>爬虫</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/安居客/" rel="nofollow"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<p>安居客</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.itrhx.com/2019/10/09/A54-pyspider-anjuke/&title=Python3 爬虫实战 — 安居客武汉二手房 | TRHX'S BLOG&pics=https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/images/trhx.png&summary=
+爬取时间：2019-10-09爬取难度：★★☆☆☆☆请求链接：https://wuhan.anjuke.com/sale/爬取目标：爬取武汉二手房每一条售房信息，包含地理位置、价格、面积等，保存为 CSV 文件涉及知识：请求库 requests、解析库 Beautiful Soup、CSV 文件储存、列表操作、分页判断完整代码：https://github.com/TRHX/Python3-Spider-Practice/tree/master/anjuke其他爬虫实战代码合集（持续更新）：https://github.com/TRHX/Python3-Spider-Practice爬虫实战专栏（持续更新）：https://itrhx.blog.csdn.net/article/category/9351278
+
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.itrhx.com/2019/10/09/A54-pyspider-anjuke/&title=Python3 爬虫实战 — 安居客武汉二手房 | TRHX'S BLOG&pics=https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/images/trhx.png&summary=
+爬取时间：2019-10-09爬取难度：★★☆☆☆☆请求链接：https://wuhan.anjuke.com/sale/爬取目标：爬取武汉二手房每一条售房信息，包含地理位置、价格、面积等，保存为 CSV 文件涉及知识：请求库 requests、解析库 Beautiful Soup、CSV 文件储存、列表操作、分页判断完整代码：https://github.com/TRHX/Python3-Spider-Practice/tree/master/anjuke其他爬虫实战代码合集（持续更新）：https://github.com/TRHX/Python3-Spider-Practice爬虫实战专栏（持续更新）：https://itrhx.blog.csdn.net/article/category/9351278
+
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACqklEQVR42u3awW4iMRAEUP7/p7PnVQSp6rZHHN6cUCBjv0GyTXW/XvH18+bK3/39+vf98xEPX3h4eHiHpp4APmOSv7Sj5/+Fh4eHd5v3ebFOFu5k6p9X7wTTbjB4eHh438BLhk/unCzr+faDh4eH9828zW//9p77UAMPDw/vHm8/lTx6aB/fQ1kLHh4eXsxrJ/0Nr6/U9/Dw8PAOHX+ToGEW426KbdFs8fDw8C7w2lCgZeTH3LOfwcPDw3uGt9kYkjCiHaVtIHh7+MbDw8O7wJst/Z8X/c1jWgWyp3Y2PDw8vAtBbYJJ3k3iiQT/x0PBw8PDO8SbRa5tOb99EMeqeXh4eHgP8jakTetVvgFEo+Ph4eE9wmsZOXK/5dTlMTw8PLwLvBkyL+fPIto2xl2lLHh4eHjl5/PFd1O4mjVstXcovjc8PDy8BW9fypplp20kkR++o+8TDw8P7wJv1rl0qniWzyp53Hh4eHhneW2EOmsFaEPY2cbztukKDw8P7wIvj1B/Pl5tNJA0abUb2H/3wcPDw7vGaxfidvj9Q8zbFPDw8PCe4bVDzhbrenKLUYbndDw8PLyYN2u6apfv/Di+D0Tw8PDwbvPaRqtksPzzeWBRF+3w8PDwLvDag++s8N8epvNyWnEox8PDwzvKy3/eJ6R8um2EMYtR8PDw8O7xWmQ+6bxFID+yFwd3PDw8vEd4eYjQbgCzg/irvPDw8PDu8WZlqllc24a5RaHrc9MVHh4e3lHephA1CxfaA3r7enjh4eHhlby8+LSJJPLHt2nzwsPDw3uS15agZtO6sWv9sV3h4eHhfQFvVirbtCm088HDw8P7Zt4mkG0bF4aHeDw8PLxrvCSMyBun2uaAtiUrDynw8PDwbvDaH/ztUbgNZPOy2evUhYeHh5fy/gH0+MU61CVrLgAAAABJRU5ErkJggg=='>
+        
+          <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png">
+        
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=https://www.itrhx.com/2019/10/09/A54-pyspider-anjuke/&title=Python3 爬虫实战 — 安居客武汉二手房 | TRHX'S BLOG&pics=https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/images/trhx.png&summary=
+爬取时间：2019-10-09爬取难度：★★☆☆☆☆请求链接：https://wuhan.anjuke.com/sale/爬取目标：爬取武汉二手房每一条售房信息，包含地理位置、价格、面积等，保存为 CSV 文件涉及知识：请求库 requests、解析库 Beautiful Soup、CSV 文件储存、列表操作、分页判断完整代码：https://github.com/TRHX/Python3-Spider-Practice/tree/master/anjuke其他爬虫实战代码合集（持续更新）：https://github.com/TRHX/Python3-Spider-Practice爬虫实战专栏（持续更新）：https://itrhx.blog.csdn.net/article/category/9351278
+
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/weibo.png">
+          
+        </a>
+      
+    
+      
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACqklEQVR42u3awW4iMRAEUP7/p7PnVQSp6rZHHN6cUCBjv0GyTXW/XvH18+bK3/39+vf98xEPX3h4eHiHpp4APmOSv7Sj5/+Fh4eHd5v3ebFOFu5k6p9X7wTTbjB4eHh438BLhk/unCzr+faDh4eH9828zW//9p77UAMPDw/vHm8/lTx6aB/fQ1kLHh4eXsxrJ/0Nr6/U9/Dw8PAOHX+ToGEW426KbdFs8fDw8C7w2lCgZeTH3LOfwcPDw3uGt9kYkjCiHaVtIHh7+MbDw8O7wJst/Z8X/c1jWgWyp3Y2PDw8vAtBbYJJ3k3iiQT/x0PBw8PDO8SbRa5tOb99EMeqeXh4eHgP8jakTetVvgFEo+Ph4eE9wmsZOXK/5dTlMTw8PLwLvBkyL+fPIto2xl2lLHh4eHjl5/PFd1O4mjVstXcovjc8PDy8BW9fypplp20kkR++o+8TDw8P7wJv1rl0qniWzyp53Hh4eHhneW2EOmsFaEPY2cbztukKDw8P7wIvj1B/Pl5tNJA0abUb2H/3wcPDw7vGaxfidvj9Q8zbFPDw8PCe4bVDzhbrenKLUYbndDw8PLyYN2u6apfv/Di+D0Tw8PDwbvPaRqtksPzzeWBRF+3w8PDwLvDag++s8N8epvNyWnEox8PDwzvKy3/eJ6R8um2EMYtR8PDw8O7xWmQ+6bxFID+yFwd3PDw8vEd4eYjQbgCzg/irvPDw8PDu8WZlqllc24a5RaHrc9MVHh4e3lHephA1CxfaA3r7enjh4eHhlby8+LSJJPLHt2nzwsPDw3uS15agZtO6sWv9sV3h4eHhfQFvVirbtCm088HDw8P7Zt4mkG0bF4aHeDw8PLxrvCSMyBun2uaAtiUrDynw8PDwbvDaH/ztUbgNZPOy2evUhYeHh5fy/gH0+MU61CVrLgAAAABJRU5ErkJggg=='>
+        
+          <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qrcode.png">
+        
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </section>
+
+
+        
+        
+            <div class="prev-next">
+                
+                    <section class="prev">
+                        <span class="art-item-left">
+                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
+                            <h4>
+                                <a href="/2019/10/12/A55-pyspider-hupu/" rel="prev" title="Python3 爬虫实战 — 虎扑论坛步行街">
+                                  
+                                      Python3 爬虫实战 — 虎扑论坛步行街
+                                  
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <a class="tag" href="/tags/爬虫/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;爬虫</a> <a class="tag" href="/tags/虎扑论坛/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;虎扑论坛</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
+                
+                
+                    <section class="next">
+                        <span class="art-item-right" aria-hidden="true">
+                            <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                            <h4>
+                                <a href="/2019/09/29/A53-hexo-backup/" rel="prev" title="使用 Hexo-Git-Backup 插件备份你的 Hexo 博客">
+                                    
+                                        使用 Hexo-Git-Backup 插件备份你的 Hexo 博客
+                                    
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <a class="tag" href="/tags/Hexo/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;Hexo</a> <a class="tag" href="/tags/备份/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;备份</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
+                
+            </div>
+        
+      </section>
+    </article>
+  
+
+  
+    <!-- 显示推荐文章和评论 -->
+
+
+
+  <article class="post white-box comments">
+    <section class="article typo">
+      <h4><i class="fas fa-comments fa-fw" aria-hidden="true"></i>&nbsp;评论</h4>
+      
+      
+      
+        <section id="comments">
+          <div id="gitalk-container"></div>
+        </section>
+      
+      
+    </section>
+  </article>
+
+
+  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
+  <script>
+    window.subData = {
+      title: 'Python3 爬虫实战 — 安居客武汉二手房',
+      tools: true
+    }
+  </script>
+
+
+</div>
+<aside class='l_side'>
+  
+    
+    
+      
+        
+          
+          
+            <section class='widget author'>
+  <div class='content pure'>
+    
+      <div class='avatar'>
+        <img class='avatar' src='https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/images/trhx.png'/>
+      </div>
+    
+    
+      <div class='text'>
+        
+          <h2>๑۩ﺴ&nbsp;&nbsp;TRHX&nbsp;&nbsp;ﺴ۩๑</h2>
+        
+        
+        
+      </div>
+    
+    <!-- 彩色滚动字体 -->
+    <div id="binft" align="center"></div>
+    <script>
+      var binft = function (r) {
+        function t() {
+          return b[Math.floor(Math.random() * b.length)]
+        }  
+        function e() {
+          return String.fromCharCode(94 * Math.random() + 33)
+        }
+        function n(r) {
+          for (var n = document.createDocumentFragment(), i = 0; r > i; i++) {
+            var l = document.createElement("span");
+            l.textContent = e(), l.style.color = t(), n.appendChild(l)
+          }
+          return n
+        }
+        function i() {
+          var t = o[c.skillI];
+          c.step ? c.step-- : (c.step = g, c.prefixP < l.length ? (c.prefixP >= 0 && (c.text += l[c.prefixP]), c.prefixP++) : "forward" === c.direction ? c.skillP < t.length ? (c.text += t[c.skillP], c.skillP++) : c.delay ? c.delay-- : (c.direction = "backward", c.delay = a) : c.skillP > 0 ? (c.text = c.text.slice(0, -1), c.skillP--) : (c.skillI = (c.skillI + 1) % o.length, c.direction = "forward")), r.textContent = c.text, r.appendChild(n(c.prefixP < l.length ? Math.min(s, s + c.prefixP) : Math.min(s, t.length - c.skillP))), setTimeout(i, d)
+        }
+        var l = "",
+        o = ["Stay Hungry, Stay Foolish!"].map(function (r) {
+        return r + ""
+        }),
+        a = 2,
+        g = 1,
+        s = 5,
+        d = 75,
+        b = ["rgb(110,64,170)", "rgb(150,61,179)", "rgb(191,60,175)", "rgb(228,65,157)", "rgb(254,75,131)", "rgb(255,94,99)", "rgb(255,120,71)", "rgb(251,150,51)", "rgb(226,183,47)", "rgb(198,214,60)", "rgb(175,240,91)", "rgb(127,246,88)", "rgb(82,246,103)", "rgb(48,239,130)", "rgb(29,223,163)", "rgb(26,199,194)", "rgb(35,171,216)", "rgb(54,140,225)", "rgb(76,110,219)", "rgb(96,84,200)"],
+        c = {
+          text: "",
+          prefixP: -s,
+          skillI: 0,
+          skillP: 0,
+          direction: "forward",
+          delay: a,
+          step: g
+        };
+        i()
+        };
+        binft(document.getElementById('binft'));
+    </script>
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="https://github.com/TRHX"
+              class="social fab fa-github flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://itrhx.blog.csdn.net/"
+              class="social fab fa-cuttlefish flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://www.zhihu.com/people/itrhx"
+              class="social fab fa-zhihu flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="mailto:admin@itrhx.com"
+              class="social fas fa-envelope flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="http://wpa.qq.com/msgrd?v=3&uin=2273902448&site=qq&menu=yes"
+              class="social fab fa-qq flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+      </div>
+    
+  </div>
+</section>
+
+          
+        
+      
+        
+          
+          
+            
+  <section class='widget toc-wrapper'>
+    
+<header class='pure'>
+  <div><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;本文目录</div>
+  
+    <div class='wrapper'><a class="s-toc rightBtn" rel="external nofollow noopener noreferrer" href="javascript:void(0)"><i class="fas fa-thumbtack fa-fw"></i></a></div>
+  
+</header>
+
+    <div class='content pure'>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#【1x00】页面整体分析"><span class="toc-text">【1x00】页面整体分析</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#【2x00】解析模块"><span class="toc-text">【2x00】解析模块</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#【3x00】循环爬取模块"><span class="toc-text">【3x00】循环爬取模块</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#【4x00】数据储存模块"><span class="toc-text">【4x00】数据储存模块</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#【5x00】完整代码"><span class="toc-text">【5x00】完整代码</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#【6x00】数据截图"><span class="toc-text">【6x00】数据截图</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#【7x00】程序不足的地方"><span class="toc-text">【7x00】程序不足的地方</span></a></li></ol>
+    </div>
+  </section>
+
+
+          
+        
+      
+        
+          
+          
+            <section class='widget plain'>
+  
+<header class='pure'>
+  <div><i class="fas fa-handshake fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;欢迎光临</div>
+  
+    <a class="rightBtn"
+    
+      rel="external nofollow noopener noreferrer"
+    
+    
+      target="_blank"
+    
+    href="https://www.revolvermaps.com/"
+    title="https://www.revolvermaps.com/">
+    <i class="fas fa-info-circle fa-fw"></i></a>
+  
+</header>
+
+  <div class='content pure'>
+    <p><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script src=" https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/js/ip.js"></script><br><script type="text/javascript" src="//rf.revolvermaps.com/0/0/4.js?i=5eyl60h41k1&amp;m=6&amp;h=122&amp;c=ff0000&amp;r=30" async="async"></script><a id="goroups_button" class="goroups_button_new" target="_blank" href="https://jq.qq.com/?_wv=1027&k=5F6HRuG">QQ 交流群</a><a id="goroups_button" class="goroups_button_new" target="_blank" href="https://t.me/joinchat/Mro2h0uVt0DpDvOofWG65A">Telegram 交流群</a></p>
+
+  </div>
+</section>
+
+          
+        
+      
+        
+          
+          
+            <section class='widget plain'>
+  
+<header class='pure'>
+  <div><i class="fas fa-map-marked-alt fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;家乡产业 - 恩施富硒茶</div>
+  
+    <a class="rightBtn"
+    
+      rel="external nofollow noopener noreferrer"
+    
+    
+      target="_blank"
+    
+    href="https://shop144988343.taobao.com/"
+    title="https://shop144988343.taobao.com/">
+    <i class="fas fa-shopping-cart fa-fw"></i></a>
+  
+</header>
+
+  <div class='content pure'>
+    <p><script src=" https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/js/tea.js"></script><marquee>恩施硒茶、利川红•冷后浑，源自北纬30°的功夫红茶，产于世界硒都 — 湖北恩施，2018年4月28日，国家主席习近平在武汉东湖同印度总理莫迪一同品尝了利川红，富硒茶具有降脂减肥、防癌抗毒、提神醒脑等功能，传统炒青工艺，正宗产地，色泽翠绿，茶香浓郁，爱茶养生人士的不二选择！</marquee><a href="https://item.taobao.com/item.htm?id=603056142723" target="_blank"><img class="img-slide tea_index_img" src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/images/tea/1.jpg" alt="恩施富硒茶"></a><a href="https://item.taobao.com/item.htm?id=607252399515" target="_blank"><img class="img-slide tea_other_img" src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/images/tea/2.jpg" alt="恩施富硒茶"></a><a href="https://item.taobao.com/item.htm?id=606622560069" target="_blank"><img class="img-slide tea_other_img" src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/images/tea/3.jpg" alt="恩施富硒茶"></a><a href="https://item.taobao.com/item.htm?id=607320655187" target="_blank"><img class="img-slide tea_other_img" src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/images/tea/4.jpg" alt="恩施富硒茶"></a><a href="https://yangkeduo.com/goods.html?goods_id=94106762662" target="_blank"><img class="img-slide tea_other_img" src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/images/tea/5.jpg" alt="恩施富硒茶"></a><img class="img-slide tea_other_img" src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/images/tea/6.jpg" alt="恩施富硒茶"><a id="goroups_button" class="goroups_button_new" target="_blank" href="https://shop144988343.taobao.com/">进店逛逛</a></p>
+
+  </div>
+</section>
+
+          
+        
+      
+        
+          
+          
+            
+  <section class='widget category'>
+    
+<header class='pure'>
+  <div><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;文章分类</div>
+  
+    <a class="rightBtn"
+    
+      rel="nofollow"
+    
+    
+    href="/categories/"
+    title="categories/">
+    <i class="fas fa-expand-arrows-alt fa-fw"></i></a>
+  
+</header>
+
+    <div class='content pure'>
+      <ul class="entry">
+        
+          <li><a class="flat-box" title="/categories/BLOG/" href="/categories/BLOG/"><div class='name'>BLOG</div><div class='badge'>(4)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/CDN/" href="/categories/CDN/"><div class='name'>CDN</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Hexo/" href="/categories/Hexo/"><div class='name'>Hexo</div><div class='badge'>(9)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Java/" href="/categories/Java/"><div class='name'>Java</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Linux/" href="/categories/Linux/"><div class='name'>Linux</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Markdown/" href="/categories/Markdown/"><div class='name'>Markdown</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Python3-学习笔记/" href="/categories/Python3-学习笔记/"><div class='name'>Python3 学习笔记</div><div class='badge'>(39)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/Python3-学习笔记/基础学习/" href="/categories/Python3-学习笔记/基础学习/"><div class='name'>基础学习</div><div class='badge'>(9)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/Python3-学习笔记/学习经验/" href="/categories/Python3-学习笔记/学习经验/"><div class='name'>学习经验</div><div class='badge'>(4)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/Python3-学习笔记/爬虫学习/" href="/categories/Python3-学习笔记/爬虫学习/"><div class='name'>爬虫学习</div><div class='badge'>(18)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/Python3-学习笔记/爬虫实战/" href="/categories/Python3-学习笔记/爬虫实战/"><div class='name'>爬虫实战</div><div class='badge'>(8)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/VPS/" href="/categories/VPS/"><div class='name'>VPS</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/WEB前端/" href="/categories/WEB前端/"><div class='name'>WEB前端</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/图床/" href="/categories/图床/"><div class='name'>图床</div><div class='badge'>(1)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
+
+          
+        
+      
+        
+          
+          
+            
+  <section class='widget tagcloud'>
+    
+<header class='pure'>
+  <div><i class="fas fa-fire fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;热门标签</div>
+  
+    <a class="rightBtn"
+    
+      rel="nofollow"
+    
+    
+    href="/tags/"
+    title="tags/">
+    <i class="fas fa-expand-arrows-alt fa-fw"></i></a>
+  
+</header>
+
+    <div class='content pure'>
+      <a href="/tags/12306/" style="font-size: 14px; color: #999">12306</a> <a href="/tags/58同城/" style="font-size: 14px; color: #999">58同城</a> <a href="/tags/Ajax/" style="font-size: 14px; color: #999">Ajax</a> <a href="/tags/BLOG/" style="font-size: 16.5px; color: #888">BLOG</a> <a href="/tags/Beautiful-Soup/" style="font-size: 14px; color: #999">Beautiful Soup</a> <a href="/tags/CDN/" style="font-size: 14px; color: #999">CDN</a> <a href="/tags/Coding-Pages/" style="font-size: 14px; color: #999">Coding Pages</a> <a href="/tags/Deepin/" style="font-size: 14px; color: #999">Deepin</a> <a href="/tags/Elicpse/" style="font-size: 14px; color: #999">Elicpse</a> <a href="/tags/GitHub-Pages/" style="font-size: 14px; color: #999">GitHub Pages</a> <a href="/tags/Github/" style="font-size: 14px; color: #999">Github</a> <a href="/tags/Github-Pages/" style="font-size: 14px; color: #999">Github Pages</a> <a href="/tags/HTTPS/" style="font-size: 16.5px; color: #888">HTTPS</a> <a href="/tags/Hexo/" style="font-size: 21.5px; color: #666">Hexo</a> <a href="/tags/ICP备案/" style="font-size: 14px; color: #999">ICP备案</a> <a href="/tags/JDBC/" style="font-size: 14px; color: #999">JDBC</a> <a href="/tags/JS-预加载/" style="font-size: 14px; color: #999">JS 预加载</a> <a href="/tags/Markdown/" style="font-size: 16.5px; color: #888">Markdown</a> <a href="/tags/Material-X/" style="font-size: 14px; color: #999">Material X</a> <a href="/tags/MongoDB/" style="font-size: 14px; color: #999">MongoDB</a> <a href="/tags/MySQL/" style="font-size: 14px; color: #999">MySQL</a> <a href="/tags/PEP8/" style="font-size: 14px; color: #999">PEP8</a> <a href="/tags/PicGo/" style="font-size: 14px; color: #999">PicGo</a> <a href="/tags/Pygame/" style="font-size: 14px; color: #999">Pygame</a> <a href="/tags/Python/" style="font-size: 16.5px; color: #888">Python</a> <a href="/tags/Redis/" style="font-size: 14px; color: #999">Redis</a> <a href="/tags/SEO/" style="font-size: 14px; color: #999">SEO</a> <a href="/tags/SQL-Server-2012/" style="font-size: 14px; color: #999">SQL Server 2012</a> <a href="/tags/SSR/" style="font-size: 14px; color: #999">SSR</a> <a href="/tags/Selenium/" style="font-size: 19px; color: #777">Selenium</a> <a href="/tags/Ubuntu/" style="font-size: 14px; color: #999">Ubuntu</a> <a href="/tags/User-Agent/" style="font-size: 14px; color: #999">User-Agent</a> <a href="/tags/VMware/" style="font-size: 16.5px; color: #888">VMware</a> <a href="/tags/VPS/" style="font-size: 14px; color: #999">VPS</a> <a href="/tags/XPath/" style="font-size: 14px; color: #999">XPath</a> <a href="/tags/if语句/" style="font-size: 14px; color: #999">if语句</a> <a href="/tags/input-函数/" style="font-size: 14px; color: #999">input()函数</a> <a href="/tags/instant-page/" style="font-size: 14px; color: #999">instant.page</a> <a href="/tags/jsDelivr/" style="font-size: 16.5px; color: #888">jsDelivr</a> <a href="/tags/lxml/" style="font-size: 14px; color: #999">lxml</a> <a href="/tags/pyspider/" style="font-size: 16.5px; color: #888">pyspider</a> <a href="/tags/requests/" style="font-size: 14px; color: #999">requests</a> <a href="/tags/spfk/" style="font-size: 14px; color: #999">spfk</a> <a href="/tags/urllib/" style="font-size: 14px; color: #999">urllib</a> <a href="/tags/while循环/" style="font-size: 14px; color: #999">while循环</a> <a href="/tags/主题个性化/" style="font-size: 14px; color: #999">主题个性化</a> <a href="/tags/代理/" style="font-size: 14px; color: #999">代理</a> <a href="/tags/公安备案/" style="font-size: 14px; color: #999">公安备案</a> <a href="/tags/函数/" style="font-size: 14px; color: #999">函数</a> <a href="/tags/列表/" style="font-size: 14px; color: #999">列表</a> <a href="/tags/变量/" style="font-size: 14px; color: #999">变量</a> <a href="/tags/哔哩哔哩/" style="font-size: 14px; color: #999">哔哩哔哩</a> <a href="/tags/图床/" style="font-size: 14px; color: #999">图床</a> <a href="/tags/图形验证码/" style="font-size: 14px; color: #999">图形验证码</a> <a href="/tags/垃圾/" style="font-size: 14px; color: #999">垃圾</a> <a href="/tags/备份/" style="font-size: 14px; color: #999">备份</a> <a href="/tags/字典/" style="font-size: 14px; color: #999">字典</a> <a href="/tags/安居客/" style="font-size: 14px; color: #999">安居客</a> <a href="/tags/年终总结/" style="font-size: 14px; color: #999">年终总结</a> <a href="/tags/异常/" style="font-size: 14px; color: #999">异常</a> <a href="/tags/技巧/" style="font-size: 14px; color: #999">技巧</a> <a href="/tags/操作列表/" style="font-size: 14px; color: #999">操作列表</a> <a href="/tags/数据类型/" style="font-size: 14px; color: #999">数据类型</a> <a href="/tags/文件/" style="font-size: 14px; color: #999">文件</a> <a href="/tags/文件储存/" style="font-size: 14px; color: #999">文件储存</a> <a href="/tags/无界面浏览器/" style="font-size: 14px; color: #999">无界面浏览器</a> <a href="/tags/模块/" style="font-size: 14px; color: #999">模块</a> <a href="/tags/正则表达式/" style="font-size: 14px; color: #999">正则表达式</a> <a href="/tags/滑动验证码/" style="font-size: 14px; color: #999">滑动验证码</a> <a href="/tags/点触验证码/" style="font-size: 14px; color: #999">点触验证码</a> <a href="/tags/爬虫/" style="font-size: 24px; color: #555">爬虫</a> <a href="/tags/猫眼电影/" style="font-size: 14px; color: #999">猫眼电影</a> <a href="/tags/瓜子二手车/" style="font-size: 14px; color: #999">瓜子二手车</a> <a href="/tags/类/" style="font-size: 14px; color: #999">类</a> <a href="/tags/继承/" style="font-size: 14px; color: #999">继承</a> <a href="/tags/编辑器/" style="font-size: 14px; color: #999">编辑器</a> <a href="/tags/虎扑论坛/" style="font-size: 14px; color: #999">虎扑论坛</a> <a href="/tags/豆瓣电影/" style="font-size: 14px; color: #999">豆瓣电影</a>
+    </div>
+  </section>
+
+          
+        
+      
+        
+          
+          
+            
+
+
+  <section class='widget music'>
+    
+<header class='pure'>
+  <div><i class="fas fa-compact-disc fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;最近在听</div>
+  
+    <a class="rightBtn"
+    
+      rel="external nofollow noopener noreferrer"
+    
+    
+      target="_blank"
+    
+    href="https://music.163.com/#/user/home?id=3019271605"
+    title="https://music.163.com/#/user/home?id=3019271605">
+    <i class="far fa-heart fa-fw"></i></a>
+  
+</header>
+
+    <div class='content pure'>
+      
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css">
+  <div class="aplayer"
+    data-theme="#1BCDFC"
+    
+    
+    data-mode="circulation"
+    data-server="netease"
+    data-type="playlist"
+    data-id="3019271605"
+    data-volume="0.7">
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
+
+
+    </div>
+  </section>
+
+
+          
+        
+      
+    
+
+  
+</aside>
+
+<footer id="footer" class="clearfix">
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="https://github.com/TRHX"
+              class="social fab fa-github flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://itrhx.blog.csdn.net/"
+              class="social fab fa-cuttlefish flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://www.zhihu.com/people/itrhx"
+              class="social fab fa-zhihu flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="mailto:admin@itrhx.com"
+              class="social fas fa-envelope flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=2273902448&amp;site=qq&amp;menu=yes"
+              class="social fab fa-qq flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+      </div>
+    
+    <br>
+    Copyright <i class="far fa-copyright"></i> 2018-2020
+    <a href="https://www.itrhx.com/" target="_blank"> TRHX&#39;S BLOG </a>丨
+    <img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.9/images/icp.png" style="width:18px;height:18px;margin-bottom:-2px" alt="ICP">
+    <a href="http://www.beian.miit.gov.cn/" target="_blank">鄂ICP备19003281号-4</a>丨
+    <img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.9/images/moeicp.png" style="width:18px;height:18px;margin-bottom:-3px" alt="MOE ICP">
+    <a href="https://icp.gov.moe/" target="_blank">萌ICP备20202022号</a>丨
+    <!-- 网站运行时间 -->
+    <span id="timeDate">正在载入...</span><span id="times"><span><i class="fa fa-spinner fa-spin"> </i></span></span>
+    <script>
+    var now = new Date(); 
+    function createtime() {
+      var grt= new Date("08/10/2018 17:38:00");//建站时间2018-08-10
+      now.setTime(now.getTime()+250); 
+      days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+      hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+      if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+      mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+      seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+      snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+      document.getElementById("timeDate").innerHTML = "本站已运行 "
+      document.getElementById("times").innerHTML = dnum +" 天 " + hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+      /*document.getElementById("times").style.color="#0056FF";*/
+      }
+      setInterval("createtime()",250);
+    </script>丨
+    <!--<a href="/sitemap.xml" target="_blank">站点地图</a>丨-->
+    <a href="https://tongji.baidu.com/web/welcome/ico?s=df0bc7c6bdbd80356ba4db429724ccad" target="_blank">百度统计</a>丨
+    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1275909280'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s23.cnzz.com/z_stat.php%3Fid%3D1275909280%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script><br><br>
+    <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://hexo.io/" target="_blank" title="由 Hexo 强力驱动">
+      <span class="badge-subject">Powered</span><span class="badge-value bg-blue">Hexo</span></a>
+    </div>
+    <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://github.com/" target="_blank" title="静态网页托管于 GitHub Pages 和 Coding Pages">
+      <span class="badge-subject">Hosted</span><span class="badge-value bg-brightgreen">GitHub & Coding</span></a>
+    </div>
+    <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://www.aliyun.com/" target="_blank" title="阿里云提供域名相关服务">
+      <span class="badge-subject">DNS</span><span class="badge-value bg-blueviolet">Aliyun</span></a>
+    </div>
+    <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://www.jsdelivr.com/" target="_blank" title="jsDelivr 提供 CDN 加速服务">
+      <span class="badge-subject">CDN</span><span class="badge-value bg-orange">jsDelivr</span></a>
+    </div>
+    <div class="github-badge">
+        <a style="color: #fff" rel="license" href="https://xaoxuu.com/wiki/material-x/" target="_blank" title="站点使用 Material X 主题">
+      <span class="badge-subject">Theme</span><span class="badge-value bg-blue">Material X</span></a>
+    </div>
+    <div class="github-badge">
+      <a style="color: #fff" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="本站点采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可">
+      <span class="badge-subject"><i class="fa fa-copyright"></i></span><span class="badge-value bg-lightgrey">BY-NC-SA 4.0</span></a>
+    </div>
+    <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://996.icu/" target="_blank" title="支持 996.ICU">
+      <span class="badge-subject">Link</span><span class="badge-value bg-red">996.ICU</span></a>
+    </div>
+    <div class="github-badge">
+      <span class="badge-subject">UV</span><span class="badge-value bg-orange" id="busuanzi_value_site_uv"></span>
+    </div>
+    <div class="github-badge">
+      <span class="badge-subject">PV</span><span class="badge-value bg-brightgreen" id="busuanzi_value_site_pv"></span>
+    </div>
+    <div class="github-badge">
+      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">130.4k</span>
+    </div>
+</footer>
+
+
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+
+  <script>
+    var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+    var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+    var ALGOLIA_API_KEY = "";
+    var ALGOLIA_APP_ID = "";
+    var ALGOLIA_INDEX_NAME = "";
+    var AZURE_SERVICE_NAME = "";
+    var AZURE_INDEX_NAME = "";
+    var AZURE_QUERY_KEY = "";
+    var BAIDU_API_ID = "";
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/"||"/";
+    if(!ROOT.endsWith('/'))ROOT += '/';
+  </script>
+
+<script src="//instant.page/1.2.2" type="module" integrity="sha384-2xV8M5griQmzyiY3CDqh1dn4z3llDVqZDqzjzcY+jCBCk/a5fXJmuZ/40JJAPeoU"></script>
+
+
+  <script async src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      const $reveal = $('.reveal');
+      if ($reveal.length === 0) return;
+      const sr = ScrollReveal({ distance: 0 });
+      sr.reveal('.reveal');
+    });
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+  <script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.2/dist/gitalk.min.js"></script>
+  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+  <script type="text/javascript">
+    var gitalk = new Gitalk({
+      clientID: "d19a84b9d9a2ddb2c6b9",
+      clientSecret: "cec9feae5129a6106edc68ce06d167be8eb06021",
+      repo: "trhx.github.io",
+      owner: "TRHX",
+      admin: "TRHX",
+      
+        id: md5(location.pathname),      // Ensure uniqueness and length less than 50
+      
+      distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+    gitalk.render('gitalk-container');
+  </script>
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/js/app.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/js/search.js"></script>
+
+
+
+
+<!-- 复制 -->
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  let COPY_SUCCESS = "复制成功";
+  let COPY_FAILURE = "复制失败";
+  /*页面载入完成后，创建复制按钮*/
+  !function (e, t, a) {
+    /* code */
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '  <i class="fa fa-copy"></i><span>复制</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+
+      clipboard.on('success', function(e) {
+        //您可以加入成功提示
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+        success_prompt(COPY_SUCCESS);
+        e.clearSelection();
+      });
+      clipboard.on('error', function(e) {
+        //您可以加入失败提示
+        console.error('Action:', e.action);
+        console.error('Trigger:', e.trigger);
+        fail_prompt(COPY_FAILURE);
+      });
+    }
+    initCopyCode();
+
+  }(window, document);
+
+  /**
+   * 弹出式提示框，默认1.5秒自动消失
+   * @param message 提示信息
+   * @param style 提示样式，有alert-success、alert-danger、alert-warning、alert-info
+   * @param time 消失时间
+   */
+  var prompt = function (message, style, time)
+  {
+      style = (style === undefined) ? 'alert-success' : style;
+      time = (time === undefined) ? 1500 : time*1000;
+      $('<div>')
+          .appendTo('body')
+          .addClass('alert ' + style)
+          .html(message)
+          .show()
+          .delay(time)
+          .fadeOut();
+  };
+
+  // 成功提示
+  var success_prompt = function(message, time)
+  {
+      prompt(message, 'alert-success', time);
+  };
+
+  // 失败提示
+  var fail_prompt = function(message, time)
+  {
+      prompt(message, 'alert-danger', time);
+  };
+
+  // 提醒
+  var warning_prompt = function(message, time)
+  {
+      prompt(message, 'alert-warning', time);
+  };
+
+  // 信息提示
+  var info_prompt = function(message, time)
+  {
+      prompt(message, 'alert-info', time);
+  };
+
+</script>
+
+
+<!-- fancybox -->
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  let LAZY_LOAD_IMAGE = "";
+  $(".article-entry").find("fancybox").find("img").each(function () {
+      var element = document.createElement("a");
+      $(element).attr("data-fancybox", "gallery");
+      $(element).attr("href", $(this).attr("src"));
+      /* 图片采用懒加载处理时,
+       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
+       * 那么此处将原本的属性名src替换为对应属性名data-original,
+       * 修改如下
+       */
+       if (LAZY_LOAD_IMAGE) {
+         $(element).attr("href", $(this).attr("data-original"));
+       }
+      $(this).wrap(element);
+  });
+</script>
+
+
+
+
+
+  <script>setLoadingBarProgress(100);</script>
+  <!-- 单击显示文字 -->
+  <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.8/js/ClickShowText.js"></script> -->
+  <!-- 点击冒点 -->
+  <canvas width="1777" height="841" style="position: fixed; left: 0px; top: 0px; z-index: 2147483647; pointer-events: none;"></canvas><script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.8/js/maodian.js"></script>
+  <!-- 浏览器搞笑标题 -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.8/js/FunnyTitle.js"></script>
+  <!-- 样式一（鼠标点击更换样式） -->
+  <!--<script src="https://g.joyinshare.com/hc/ribbon.min.js" type="text/javascript"></script>-->
+  <!-- 样式二（飘动的彩带） -->
+  <!--<script src="https://g.joyinshare.com/hc/piao.js" type="text/javascript"></script>-->
+  <!-- 数字雨 -->
+  <canvas id="canvas" width="1920" height="1080"></canvas>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.8/js/DigitalRain.js"></script>
+  <!--动态线条背景-->
+  <!--<script type="text/javascript" color="27,195,251" opacity='0.7' zIndex="-5" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>-->
+  <!-- 速度优化脚本 -->
+  <script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.8/js/instantclick-1.2.2.js" type="module"></script>
+  <!-- 悟空 -->
+  <!--<div id="wukong"><marquee direction="right"><img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.8/images/wukong.gif"></marquee></div>-->
+  <!-- 雪花 -->
+  <!--<script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.8/js/snow1.js"></script> -->
+</body>
+</html>

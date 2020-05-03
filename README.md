@@ -22,11 +22,5 @@
 
 > ![](https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.5/images/group.png)
 
-## 修改文件
-上传了README文件
-测试一下啊
-## 更新文件
-不知道说点啥好
-反正就这样吧
-先上传看看
+
 
